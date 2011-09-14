@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 	
 <head> 
    <meta charset="utf-8">
    <meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
-   <title>A Brand New nanoc Site - <%= @item[:title] %></title>
+   <title><%= @item[:title] %> | Монетки Роджера</title>
    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> 
    <link rel="stylesheet" type="text/css" href="/style.css" media="screen"> 
 </head> 
@@ -14,89 +14,104 @@
 <div id="body"> 
                 
 <table width="100%" style="position: relative"> 
-                    <tr> 
-                        <td width="8%"></td> 
-                        <td width="69%"> 
-                            <div id="logo">Editorium.ru</div> 
-                        </td> 
-                        <td width="23%" colspan="2"> 
-                            <div id="search"> 
-                                <div class="reducer"> 
-                                    <form action="/search/" method="get"> 
-                                        <input type="search" autocomplete="off" placeholder="поиск" name="query" value="" /> 
-                                    </form> 
-                                </div> 
-                            </div> 
-                        </td> 
-                    </tr> 
-                    <tr> 
-                        <td></td> 
-                        <td> 
- 
-                            
- 
-                            <div id="content_container"> 
-                                <div class="reducer"><h1>О&nbsp;редактировании и&nbsp;редакторах</h1> 
- 
-    <h2>Сборник-антология</h2> 
- 
-    <%= yield %>
-    
-</div> 
-                            </div> 
- 
- 
- 
-                        </td> 
-                        <td colspan="2"> 
-                            <div id="navigation"> 
-                                <div class="reducer"> 
-                                            <span class="nav_link selected current"><span>О&nbsp;редактировании и&nbsp;редакторах</span></span> 
-                                    
-                                            <span class="nav_link"><a href="/preface/"><span>От&nbsp;составителя</span></a></span> 
-                                    
-                                            <span class="nav_link"><a href="/authors/"><span>Именной указатель</span></a></span> 
-                                    
-                                            <span class="nav_link"><a href="/bibliography/"><span>Дополнительная литература</span></a></span> 
-                                    
-                                </div> 
-                            </div> 
-                        </td> 
-                    </tr> 
-                    <tr> 
-                        <td colspan="4"> 
-                            <div id="full_width_container_2"></div> 
-                        </td> 
-                    </tr> 
-                    <tr> 
-                        <td width="8%"></td> 
-                        <td width="74%" colspan="2"> 
-                            Тра-тра-та
-    <div style="clear: both;"></div> 
-</div> 
-    <div id="footer"> 
-        <table width="100%"> 
-            <tr> 
-                <td> 
-                    <p>©&nbsp;2011 Мильчин&nbsp;А.&nbsp;Э., составление<br/> 
-                        Все комментарии, советы, предложения и&nbsp;правки присылайте по&nbsp;адресу:
-                        <a href="mailto:glavred@editorium.ru">glavred@editorium.ru</a></p> 
-                </td> 
-                <td class="copy_artlebedev"> 
-                    <p>©&nbsp;2011 <a href="http://www.artlebedev.ru/"> 
-                        <img src="/img/artlebedev_bw.gif" width="90" height="37" />Студия Артемия Лебедева</a><br/> 
-                        <a href="http://www.artlebedev.ru/everything/editorium/">Информация о сайте</a> 
-                    </p> 
-                </td> 
-            </tr> 
-        </table> 
-    </div> 
-                        </td> 
-                        <td width="8%"></td> 
-                    </tr> 
-                </table> 
-                
-                
+
+<tr> 
+   <td width="8%">
+   </td>
+   <td width="69%"> 
+      <div id="logo">Editorium.ru</div> 
+   </td> 
+   <td width="23%" colspan="2"> 
+      <div id="search"> 
+         <div class="reducer"> 
+            <form action="/search/" method="get"> 
+               <input type="search" autocomplete="off" placeholder="Поиск" name="query" value="" /> 
+            </form> 
+         </div> 
+      </div> 
+   </td> 
+</tr> 
+
+<tr> 
+   <td>
+   </td> 
+   <td> 
+      <div id="content_container"> 
+         <div class="reducer">
+            <h1>О&nbsp;редактировании и&nbsp;редакторах</h1> 
+            <h2>Сборник-антология</h2> 
+            <%= yield %>
+         </div> 
+      </div> 
+   </td> 
+   <td colspan="2"> 
+      <div id="navigation"> 
+         <div class="reducer">
+         
+            <%= 
+               link_to_unless_current(
+                  'Главная', 
+                  '/', 
+                  :class => 'nav_link'
+               ) 
+            %>
+            
+            <%= 
+               link_to_unless_current(
+                  'Города воинской славы', 
+                  '/series/goroda-voinskoj-slavy/', 
+                  :class => 'nav_link'
+               ) 
+            %>
+            
+            <%= 
+               link_to_unless_current(
+                  '200-летие образования министерств', 
+                  '/series/200letie-obrazovanija-ministerstv/', 
+                  :class => 'nav_link'
+               )
+            %>  
+                        
+         </div> 
+      </div> 
+   </td> 
+</tr> 
+
+<tr> 
+   <td colspan="4"> 
+      <div id="full_width_container_2">
+      </div> 
+   </td> 
+</tr> 
+
+<tr> 
+   <td width="8%"></td> 
+   <td width="74%" colspan="2"> 
+      Тра-тра-та
+      <div style="clear: both;"></div> 
+      
+      <div id="footer">
+      <table width="100%"> 
+      <tr> 
+         <td> 
+            <p>©&nbsp;2011 Мильчин&nbsp;А.&nbsp;Э., составление<br/> 
+            Все комментарии, советы, предложения и&nbsp;правки присылайте по&nbsp;адресу:
+            <a href="mailto:glavred@editorium.ru">glavred@editorium.ru</a></p> 
+         </td> 
+         <td class="copy_artlebedev"> 
+            <p>©&nbsp;2011 <a href="http://www.artlebedev.ru/"> 
+            <img src="/img/artlebedev_bw.gif" width="90" height="37" />Студия Артемия Лебедева</a><br/> 
+            <a href="http://www.artlebedev.ru/everything/editorium/">Информация о сайте</a> 
+            </p> 
+         </td> 
+      </tr> 
+      </table> 
+      </div> 
+   </td> 
+   <td width="8%">
+   </td> 
+</tr>
+</table>
                 
 </div>
 </body> 
