@@ -1,101 +1,328 @@
-* {
-  margin: 0;
-  padding: 0;
-
-  font-family: Georgia, Palatino, Times, 'Times New Roman', sans-serif;
+html {
+   background: #fff;
+   color: #000;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   width: 100%;
 }
 
 body {
-  background: #fff;
+   font-family: Georgia, serif;
+   font-size: 100.01%;
+   line-height: 1.4;
+   margin: 0;
+   min-width: 900px;
+   padding: 0;
+   position: relative;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:link,
-a:visited {
-  color: #f30;
+a, a:link {
+	color: #05C;
 }
 
 a:hover {
-  color: #f90;
+	color: #f00;
 }
 
-#main {
-  position: absolute;
-
-  top: 40px;
-  left: 280px;
-
-  width: 500px;
+a:visited {
+   color: #909;
 }
 
-#main h1 {
-  font-size: 40px;
-  font-weight: normal;
-
-  line-height: 40px;
-
-  letter-spacing: -1px;
+a:visited:hover {
+   color: #C00;
 }
 
-#main p {
-  margin: 20px 0;
-  
-  font-size: 15px;
-  
-  line-height: 20px;
+a:focus {
+   outline: none;
 }
 
-#main ul, #main ol {
-  margin: 20px;
+img {
+    border: none;
 }
 
-#main li {
-  font-size: 15px;
-  
-  line-height: 20px;
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+   empty-cells: show;
 }
 
-#main ul li {
-  list-style-type: square;
+td {
+    vertical-align: top;
+    position: static;
 }
 
-#sidebar {
-  position: absolute;
 
-  top: 40px;
-  left: 20px;
-  width: 200px;
-
-  padding: 20px 20px 0 0;
-
-  border-right: 1px solid #ccc;
-
-  text-align: right;
+#body {
+   margin: 0 1.5em 0 1.5em;
+   padding: 1em 0 0 0;
+   position: relative;
 }
 
-#sidebar h2 {
-  text-transform: uppercase;
-
-  font-size: 13px;
-
-  color: #333;
-
-  letter-spacing: 1px;
-
-  line-height: 20px;
+#content_container {
+    clear: both;
+    width: 100%;
+}
+#content_container .reducer {
+    padding-top: 0.5em;
+    margin-right: 2.5em;
+    /*border: 1px solid #eee;*/
 }
 
-#sidebar ul {
-  list-style-type: none;
-
-  margin: 20px 0;
+#logo {
+    font-weight: normal;
+    font-family: "Arial Black", sans-serif;
+    float: left;
+    height: 1.6em;
+    font-size: 120%;
 }
 
-#sidebar li {
-  font-size: 14px;
-
-  line-height: 20px;
+#logo a {
+    text-decoration: none;
+    color: black;
 }
+
+
+/* перенести во фрагмент */
+#ptu_bc {
+    /*border: 1px solid #eda;*/
+    font-size: 85%;
+    font-family: arial, sans-serif;
+    margin: 1em 0 2em 0;
+}
+#ptu_bc p {
+    margin: 0 0 0.5em 0;
+    line-height: 1.2;
+}
+#hidden_bc {
+    overflow: hidden;
+}
+#play_bc {
+    display: inline;
+}
+
+
+
+#search {
+    width: 100%;
+    padding: 0 1em 0 0;
+    overflow: hidden;
+    height: 1.9em;
+}
+
+#search input {
+    width: 100%;
+}
+
+#navigation {
+   font-family: arial, sans-serif;
+   font-size: 85%;
+   margin: 4.5em 0 2em 0;
+}
+
+#navigation .reducer {
+   margin: 0;
+}
+
+#navigation .nav_link {
+    display: block;
+    margin: 0 0 0.3em 0;
+}
+
+#navigation .selected {
+    font-style: italic;
+}
+#navigation a:visited {
+    color: #0055CC;
+}
+#navigation a:visited:hover {
+    color: #CC0000;
+}
+
+
+.ptu_part {
+    font-family: arial, sans-serif;
+    font-size: 85%;
+    width: 90%;
+    margin-bottom: 4em;
+}
+.ptu_part li.level_2 {
+    margin-top: 0.5em;
+}
+
+
+/* кнопка "весь сайт" и внутренности */
+
+#all_ptu_container {
+    //width: 145%;
+    font-family: arial, sans-serif;
+}
+#all_ptu {
+    background: #e8e8e8;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    left: 0;
+    top: 2.6em; /* по высоте #logo */
+    padding-top: 2em;
+    border-radius: 0.5em; -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em;
+}
+#all_ptu .reducer {
+    margin: 0 1.5em 2em 1.5em;
+}
+#all_ptu table {
+    font-size: 85%;
+}
+#all_ptu_toggle {
+    position: relative;
+    z-index: 10;
+}
+#bc {
+    position: relative;
+    zoom: 1;
+    z-index: 10;
+    
+    display: inline-block;
+    float: left;
+    line-height: 1.6em;
+    margin: 0 1.3em 0 -1.3em;
+    padding: 0.2em 1.3em;
+    background: #e8e8e8;
+    border-radius: 0.5em; -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em;
+    font-size: 85%;
+}
+#all_ptu table td {
+    vertical-align: top;
+    padding: 0 1em;
+}
+#all_ptu p {
+    margin: 0;
+}
+#all_ptu p.level_1 {
+    margin: 1em 0 0 0;
+    font-size: 100%;
+    font-weight: bold;
+}
+#all_ptu p.parent {
+    behavior: expression(!this.before ? this.before = this.innerHTML = '→&nbsp;' + this.innerHTML : '');
+    /*margin-left: -1.24em;*/
+    text-indent: -1.3em;
+}
+#all_ptu p.parent:before{
+    content: "→ ";
+}
+
+
+#all_ptu .site_nav {
+    margin: 1em 0 0 0;
+}
+#all_ptu h2 a,
+#all_ptu .site_nav a {
+    color: black;
+}
+#all_ptu h2 a:hover,
+#all_ptu h2 a:visited:hover,
+#all_ptu .site_nav a:hover,
+#all_ptu .site_nav a:visited:hover {
+    color: #c00;
+}
+#all_ptu .site_nav .selected {
+    font-weight: bold;
+}
+
+
+
+
+
+.pseudo_link {
+	color: #0055CC;
+    border-bottom: 1px dashed;
+    cursor: pointer;
+}
+.pseudo_link:hover {
+	color: #ff0000;
+}
+
+
+
+
+
+#footer {
+    clear: both;
+    margin-top: 4em;
+    padding: 0 0 1em 0;
+    border-top: 1px solid gray;
+}
+
+#footer p {
+    font-size: 85%;
+    margin: 0.5em 0;
+}
+
+
+h1, h5 {
+    font-size: 260%;
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 0.33em 0 0.6em 0;
+}
+h5 {
+    margin: -0.1em 0 0 0;
+}
+
+h2 {
+    font-size: 100%;
+    font-weight: bold;
+    margin: 2.5em 0 1em 0;
+}
+h3 {
+    font-size: 130%;
+    font-weight: bold;
+    margin: 2.5em 0 1em 0;
+}
+h4 {
+    font-size: 100%;
+    font-weight: bold;
+    margin: 2em 0 1em 0;
+}
+
+hr {
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    background-color: #999;
+}
+div.hr {
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #ccc;
+}
+
+
+
+.biblio_comment {
+    margin-left: 2em;
+    font-size: 85%;
+}
+
+var {
+    font-style: normal;
+}
+
+.text ul {
+    padding: 0 0 0 1.2em;
+}
+.text li {
+    list-style-type: none;
+    behavior: expression(!this.before ? this.before = this.innerHTML = '—&nbsp;' + this.innerHTML : '');
+    text-indent: -1.2em;
+}
+.text li:before{
+    content: "— ";
+}
+
+#djDebugToolbarHandle {
+    top: 100px !important;
+    opacity: 0.2 !important;
+}
+
