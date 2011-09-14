@@ -70,7 +70,15 @@
                   '/series/200letie-obrazovanija-ministerstv/', 
                   :class => 'nav_link'
                )
-            %>  
+            %>
+            
+            <%= 
+               link_to_unless_current(
+                  'Российская Федерация', 
+                  '/series/rossijskaja-federacija/', 
+                  :class => 'nav_link'
+               )
+            %>
                         
          </div> 
       </div> 
