@@ -13,11 +13,10 @@
 <body> 
 <div id="body"> 
                 
-<table width="100%" style="position: relative"> 
+<table width="100%" style="position: relative" border="1"> 
 
 <tr> 
-   <td width="8%">
-   </td>
+   <td width="8%" rowspan="3" />
    <td width="69%"> 
       <div id="logo">Editorium.ru</div> 
    </td> 
@@ -32,16 +31,10 @@
    </td> 
 </tr> 
 
-<tr> 
-   <td>
-   </td> 
+<tr>
    <td> 
       <div id="content_container"> 
-         <div class="reducer">
-            <h1>О&nbsp;редактировании и&nbsp;редакторах</h1> 
-            <h2>Сборник-антология</h2> 
-            <%= yield %>
-         </div> 
+         <div class="reducer"><%= yield %></div> 
       </div> 
    </td> 
    <td colspan="2"> 
@@ -85,39 +78,9 @@
    </td> 
 </tr> 
 
-<tr> 
-   <td colspan="4"> 
-      <div id="full_width_container_2">
-      </div> 
-   </td> 
-</tr> 
-
-<tr> 
-   <td width="8%"></td> 
-   <td width="74%" colspan="2"> 
-      Тра-тра-та
-      <div style="clear: both;"></div> 
-      
-      <div id="footer">
-      <table width="100%"> 
-      <tr> 
-         <td> 
-            <p>©&nbsp;2011 Мильчин&nbsp;А.&nbsp;Э., составление<br/> 
-            Все комментарии, советы, предложения и&nbsp;правки присылайте по&nbsp;адресу:
-            <a href="mailto:glavred@editorium.ru">glavred@editorium.ru</a></p> 
-         </td> 
-         <td class="copy_artlebedev"> 
-            <p>©&nbsp;2011 <a href="http://www.artlebedev.ru/"> 
-            <img src="/img/artlebedev_bw.gif" width="90" height="37" />Студия Артемия Лебедева</a><br/> 
-            <a href="http://www.artlebedev.ru/everything/editorium/">Информация о сайте</a> 
-            </p> 
-         </td> 
-      </tr> 
-      </table> 
-      </div> 
-   </td> 
-   <td width="8%">
-   </td> 
+<tr>
+   <td width="74%" colspan="2"><%= render 'footer' %></td> 
+   <td width="8%" />
 </tr>
 </table>
                 
