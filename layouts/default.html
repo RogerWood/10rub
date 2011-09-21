@@ -13,14 +13,14 @@
 <body> 
 <div id="body"> 
                 
-<table width="100%" style="position: relative" border="1"> 
+<table width="100%"> 
 
 <tr> 
-   <td width="8%" rowspan="3" />
+   <td width="8%" rowspan="2" />
    <td width="69%"> 
       <div id="logo">Editorium.ru</div> 
    </td> 
-   <td width="23%" colspan="2"> 
+   <td width="23%"> 
       <div id="search"> 
          <div class="reducer"> 
             <form action="/search/" method="get"> 
@@ -37,53 +37,60 @@
          <div class="reducer"><%= yield %></div> 
       </div> 
    </td> 
-   <td colspan="2"> 
+   <td> 
       <div id="navigation"> 
-         <div class="reducer">
          
-            <%= 
-               link_to_unless_current(
-                  'Главная', 
-                  '/', 
-                  :class => 'nav_link'
-               ) 
-            %>
-            
-            <%= 
-               link_to_unless_current(
-                  'Города воинской славы', 
-                  '/series/goroda-voinskoj-slavy/', 
-                  :class => 'nav_link'
-               ) 
-            %>
-            
-            <%= 
-               link_to_unless_current(
-                  '200-летие образования министерств', 
-                  '/series/200letie-obrazovanija-ministerstv/', 
-                  :class => 'nav_link'
-               )
-            %>
-            
-            <%= 
-               link_to_unless_current(
-                  'Российская Федерация', 
-                  '/series/rossijskaja-federacija/', 
-                  :class => 'nav_link'
-               )
-            %>
-                        
-         </div> 
+         <%= 
+            link_to_unless_current(
+               'Главная', 
+               '/'
+            ) 
+         %>
+         
+         <%= 
+            link_to_unless_current(
+               'О сайте', 
+               '/about.html'
+            ) 
+         %>
+         
+         <h2>Серии</h2>
+         
+         <%= 
+            link_to_unless_current(
+               'Города воинской славы', 
+               '/series/goroda-voinskoj-slavy/'
+            ) 
+         %>
+         
+         <%= 
+            link_to_unless_current(
+               '200-летие образования министерств', 
+               '/series/200letie-obrazovanija-ministerstv/'
+            )
+         %>
+         
+         <%= 
+            link_to_unless_current(
+               'Российская Федерация', 
+               '/series/rossijskaja-federacija/'
+            )
+         %>
+         
+         <%= 
+            link_to_unless_current(
+               'Древние города России', 
+               '/series/.../'
+            )
+         %>
+                      
       </div> 
    </td> 
 </tr> 
-
-<tr>
-   <td width="74%" colspan="2"><%= render 'footer' %></td> 
-   <td width="8%" />
-</tr>
 </table>
-                
 </div>
+   
+<%= render 'footer' %>        
+
 </body> 
 </html>

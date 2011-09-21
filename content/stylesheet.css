@@ -14,15 +14,15 @@ body {
    margin: 0;
    min-width: 900px;
    padding: 0;
-   position: relative;
 }
 
 a, a:link {
-	color: #05C;
+	color: #05c;
 }
 
 a:hover {
-	color: #f00;
+   color: #f00;
+   text-decoration: none;	
 }
 
 a:visited {
@@ -30,7 +30,7 @@ a:visited {
 }
 
 a:visited:hover {
-   color: #C00;
+   color: #c00;
 }
 
 a:focus {
@@ -56,17 +56,16 @@ td {
 #body {
    margin: 0 1.5em 0 1.5em;
    padding: 1em 0 0 0;
-   position: relative;
 }
 
 #content_container {
     clear: both;
     width: 100%;
 }
+
 #content_container .reducer {
     padding-top: 0.5em;
     margin-right: 2.5em;
-    /*border: 1px solid #eee;*/
 }
 
 #logo {
@@ -82,27 +81,6 @@ td {
     color: black;
 }
 
-
-/* перенести во фрагмент */
-#ptu_bc {
-    /*border: 1px solid #eda;*/
-    font-size: 85%;
-    font-family: arial, sans-serif;
-    margin: 1em 0 2em 0;
-}
-#ptu_bc p {
-    margin: 0 0 0.5em 0;
-    line-height: 1.2;
-}
-#hidden_bc {
-    overflow: hidden;
-}
-#play_bc {
-    display: inline;
-}
-
-
-
 #search {
     width: 100%;
     padding: 0 1em 0 0;
@@ -114,121 +92,33 @@ td {
     width: 100%;
 }
 
+/* навигационная панель */
+
 #navigation {
    font-family: arial, sans-serif;
    font-size: 85%;
    margin: 4.5em 0 2em 0;
 }
 
-#navigation .reducer {
-   margin: 0;
+#navigation h2 {
+   font-family: Georgia, serif;
 }
 
-#navigation .nav_link {
-    display: block;
-    margin: 0 0 0.3em 0;
+#navigation a,
+#navigation span {
+   display: block;
+   margin: 0 0 0.3em 0;
 }
 
-#navigation .selected {
-    font-style: italic;
-}
 #navigation a:visited {
-    color: #0055CC;
+   color: #05c;
 }
+
 #navigation a:visited:hover {
-    color: #CC0000;
+   color: #c00;
 }
 
 
-.ptu_part {
-    font-family: arial, sans-serif;
-    font-size: 85%;
-    width: 90%;
-    margin-bottom: 4em;
-}
-.ptu_part li.level_2 {
-    margin-top: 0.5em;
-}
-
-
-/* кнопка "весь сайт" и внутренности */
-
-#all_ptu_container {
-    //width: 145%;
-    font-family: arial, sans-serif;
-}
-#all_ptu {
-    background: #e8e8e8;
-    position: absolute;
-    width: 100%;
-    z-index: 5;
-    left: 0;
-    top: 2.6em; /* по высоте #logo */
-    padding-top: 2em;
-    border-radius: 0.5em; -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em;
-}
-#all_ptu .reducer {
-    margin: 0 1.5em 2em 1.5em;
-}
-#all_ptu table {
-    font-size: 85%;
-}
-#all_ptu_toggle {
-    position: relative;
-    z-index: 10;
-}
-#bc {
-    position: relative;
-    zoom: 1;
-    z-index: 10;
-    
-    display: inline-block;
-    float: left;
-    line-height: 1.6em;
-    margin: 0 1.3em 0 -1.3em;
-    padding: 0.2em 1.3em;
-    background: #e8e8e8;
-    border-radius: 0.5em; -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em;
-    font-size: 85%;
-}
-#all_ptu table td {
-    vertical-align: top;
-    padding: 0 1em;
-}
-#all_ptu p {
-    margin: 0;
-}
-#all_ptu p.level_1 {
-    margin: 1em 0 0 0;
-    font-size: 100%;
-    font-weight: bold;
-}
-#all_ptu p.parent {
-    behavior: expression(!this.before ? this.before = this.innerHTML = '→&nbsp;' + this.innerHTML : '');
-    /*margin-left: -1.24em;*/
-    text-indent: -1.3em;
-}
-#all_ptu p.parent:before{
-    content: "→ ";
-}
-
-
-#all_ptu .site_nav {
-    margin: 1em 0 0 0;
-}
-#all_ptu h2 a,
-#all_ptu .site_nav a {
-    color: black;
-}
-#all_ptu h2 a:hover,
-#all_ptu h2 a:visited:hover,
-#all_ptu .site_nav a:hover,
-#all_ptu .site_nav a:visited:hover {
-    color: #c00;
-}
-#all_ptu .site_nav .selected {
-    font-weight: bold;
-}
 
 
 
@@ -239,51 +129,48 @@ td {
     border-bottom: 1px dashed;
     cursor: pointer;
 }
+
 .pseudo_link:hover {
 	color: #ff0000;
 }
 
-
-
-
-
 #footer {
-    clear: both;
-    margin-top: 4em;
-    padding: 0 0 1em 0;
-    border-top: 1px solid gray;
-}
-
-#footer p {
-    font-size: 85%;
-    margin: 0.5em 0;
+   background: #f8f7f7 url("img/footer-bg.png") center top;
+   border-top: 1px solid #ccc;
+   float: left;
+   height: 140px;
+   padding-top: 13px;
+   width: 100%;
 }
 
 
 h1, h5 {
-    font-size: 260%;
-    line-height: 1.2;
-    font-weight: normal;
-    margin: 0.33em 0 0.6em 0;
-}
-h5 {
-    margin: -0.1em 0 0 0;
+   font-size: 260%;
+   line-height: 1.2;
+   font-weight: normal;
+   margin: 0.33em 0 0.6em 0;
 }
 
 h2 {
-    font-size: 100%;
-    font-weight: bold;
-    margin: 2.5em 0 1em 0;
+   font-size: 130%;
+   font-weight: bold;
+   margin: 2.5em 0 1em 0;
 }
+
 h3 {
-    font-size: 130%;
-    font-weight: bold;
-    margin: 2.5em 0 1em 0;
+   font-size: 100%;
+   font-weight: bold;
+   margin: 2.5em 0 1em 0;
 }
+
 h4 {
-    font-size: 100%;
-    font-weight: bold;
-    margin: 2em 0 1em 0;
+   font-size: 100%;
+   font-weight: bold;
+   margin: 2em 0 1em 0;
+}
+
+h5 {
+   margin: -0.1em 0 0 0;
 }
 
 hr {
@@ -292,37 +179,10 @@ hr {
     border: 0;
     background-color: #999;
 }
+
 div.hr {
     width: 100%;
     height: 1px;
     border-top: 1px solid #ccc;
-}
-
-
-
-.biblio_comment {
-    margin-left: 2em;
-    font-size: 85%;
-}
-
-var {
-    font-style: normal;
-}
-
-.text ul {
-    padding: 0 0 0 1.2em;
-}
-.text li {
-    list-style-type: none;
-    behavior: expression(!this.before ? this.before = this.innerHTML = '—&nbsp;' + this.innerHTML : '');
-    text-indent: -1.2em;
-}
-.text li:before{
-    content: "— ";
-}
-
-#djDebugToolbarHandle {
-    top: 100px !important;
-    opacity: 0.2 !important;
 }
 
