@@ -21,7 +21,7 @@ compile '*' do
     # бинарные файлы не трогаем
   else
     filter :kramdown
-    layout 'default'
+    layout 'index'
   end
 end
 
