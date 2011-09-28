@@ -1,42 +1,92 @@
 #!/usr/bin/env ruby
 
-# * The string given to #compile and #route are matching patterns for
-#   identifiers--not for paths. Therefore, you can’t match on extension.
 #
-# * The order of rules is important: for each item, only the first matching
-#   rule is applied.
+# сompilation #################################################################
 #
-# * Item identifiers start and end with a slash (e.g. “/about/” for the file
-#   “content/about.html”). To select all children, grandchildren, … of an
-#   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
-#   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do
-  # сжатие до минимума
-  filter :rainpress
+# частичные шаблоны обозначаются подчеркиванием 
+compile '/assets/styles/_*/' do   
+   # не обрабатывать и не выкладывать
+end
+ 
+compile '/assets/styles/*/' do
+   #filter :sass, Compass.sass_engine_options
+   #filter :relativize_paths, :type => :css
+   filter :rainpress
 end
 
+#compile '/series/*/*/' do
+#   filter :kramdown, :auto_ids => false
+#   layout 'coin'
+#end
+
+#compile '/series/*/' do
+#   filter :kramdown, :auto_ids => false
+#   layout 'series'
+#end
+
 compile '*' do
-  if item.binary?
-    # бинарные файлы не трогаем
-  else
-    filter :kramdown
-    layout 'default'
+   if item.binary?
+      # бинарные файлы не трогаем
+   else
+      
+      # определение по расширению    
+      case item[:extension]
+         when 'md', 'markdown' then
+            case item[:markdown]
+               when 'advanced'
+                  filter :kramdown, :auto_ids => false
+               when 'basic'
+                  filter :rdiscount
+            end
+        # when 'haml'
+         #   filter :haml
+         
+         # на всякий случай
+         # when 'md','markdown' then
+         #   filter :bluecloth
+      end
+      
+      #layout 'default'
+     # filter :haml, :format => :html5
+     
+      filter :erb
+      layout 'default'
+      
+      #if @item[:layout]
+      #   layout(@item[:layout])
+      #elsif @item[:kind] == 'article'
+      #   layout 'article'
+      #end
   end
 end
 
-route '/stylesheet/' do
-  '/style.css'
+#
+# routing #####################################################################
+#
+
+route '/assets/styles/*/' do
+   item.identifier[14..-2] + '.css'
 end
 
 route '*' do
-  if item.binary?
-    # Write item with identifier /foo/ to /foo.ext
-    item.identifier.chop + '.' + item[:extension]
-  else
-    # Write item with identifier /foo/ to /foo/index.html
-    item.identifier + 'index.html'
-  end
+   if item.binary?    
+      # бинарные файлы должны иметь нормальный необрезанный путь
+      item.identifier.chop + '.' + item[:extension]  
+   elsif item[:is_partial] || item[:kind] == 'article'
+      # не выводить частичные шаблоны, стили и прочее
+      nil 
+   else
+      # каждый файл в отдельную директорию
+      rep.item.identifier + 'index.html'
+   end
 end
 
+#
+# layouting ###################################################################
+#
+
+layout '/default/', :haml, :format => :html5, :ugly => true
+
 layout '*', :erb
+
