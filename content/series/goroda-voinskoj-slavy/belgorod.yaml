@@ -1,5 +1,8 @@
-title:         "Белгород | Города воинской славы"
-markdown:      false
+markdown:      yes
+
+head_title:    "Белгород | Города воинской славы"
+post_title:    Белгород, 2011 --- 10 рублей
+
 image:         http://farm7.static.flickr.com/6171/6172186115_db5ba07f37.jpg
 image_height:  250
 image_width:   500
