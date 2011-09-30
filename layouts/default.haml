@@ -3,36 +3,36 @@
 
    %head
       %meta{ "charset" => "UTF-8" }
-         %title = @item[:has_full_title] ? @item[:title] : "nanoc &rsaquo; #{@item[:title]}"
+         %title
+            = @item[:has_full_title] ? @item[:title] : "#{@item[:title]} &rsaquo; nanoc"
          %link{ :rel => "stylesheet", :href => "/screen.css", :type => "text/css", :media => "screen" }
 
-   %body     	
-      #body
-                
-         %table{ :width => "100%" }
-            %tr 
-               %td{ :width => "8%", :rowspan => "2" }
-               %td{ :width => "69%" }
-                  #logo Editorium.ru
-               %td{ :width => "23%" }
-                  #search
-                     .reducer
-                        %form{ :action => "/search/", :method => "get" }
-                           %input{ :type => "search", :autocomplete => "off", :placeholder => "Поиск", :name => "query", :value => "" }
-            %tr
-               %td 
-                  #content_container
-                     .reducer 
-                        = yield 
-               %td
-                  #navigation
-                     = link_to_unless_current('Главная', '/') 
-                     = link_to_unless_current('О сайте', '/about.html') 
+   %body     	        
+      %table#content
+         %tr 
+            %td{ :width => "8%", :rowspan => "2" }
+            %td{ :width => "69%" }
+               #logo Editorium.ru
+            %td{ :width => "23%" }
+               #search
+                  .reducer
+                     %form{ :action => "/search/", :method => "get" }
+                        %input{ :type => "search", :autocomplete => "off", :placeholder => "Поиск", :name => "query", :value => "" }
+         %tr
+            %td 
+               #content_container
+                  .reducer
+                     = yield 
+            %td
+               #navigation
+                  = link_to_unless_current('Главная', '/') 
+                  = link_to_unless_current('О сайте', '/about.html') 
+      
+                  %h2 Серии
+      
+                  = link_to_unless_current('Города воинской славы', '/series/goroda-voinskoj-slavy/') 
+                  = link_to_unless_current('200-летие образования министерств', '/series/200letie-obrazovanija-ministerstv/')
+                  = link_to_unless_current('Российская Федерация', '/series/rossijskaja-federacija/')
+                  = link_to_unless_current('Древние города России', '/series/.../')
          
-                     %h2 Серии
-         
-                     = link_to_unless_current('Города воинской славы', '/series/goroda-voinskoj-slavy/') 
-                     = link_to_unless_current('200-летие образования министерств', '/series/200letie-obrazovanija-ministerstv/')
-                     = link_to_unless_current('Российская Федерация', '/series/rossijskaja-federacija/')
-                     = link_to_unless_current('Древние города России', '/series/.../')
-
+      = render 'footer'

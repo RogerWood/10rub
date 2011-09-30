@@ -29,28 +29,19 @@ compile '*' do
    if item.binary?
       # бинарные файлы не трогаем
    else
-      
+      filter :erb
+       
       # определение по расширению    
       case item[:extension]
          when 'md', 'markdown' then
             case item[:markdown]
-               when 'advanced'
+               when 'advanced' then
                   filter :kramdown, :auto_ids => false
-               when 'basic'
-                  filter :rdiscount
+               when 'basic' then
+                  filter :rdiscount # или :bluecloth?
             end
-        # when 'haml'
-         #   filter :haml
-         
-         # на всякий случай
-         # when 'md','markdown' then
-         #   filter :bluecloth
       end
-      
-      #layout 'default'
-     # filter :haml, :format => :html5
-     
-      filter :erb
+
       layout 'default'
       
       #if @item[:layout]
@@ -86,7 +77,5 @@ end
 # layouting ###################################################################
 #
 
-layout '/default/', :haml, :format => :html5, :ugly => true
-
-layout '*', :erb
+layout '*', :haml, :format => :html5, :ugly => true
 
