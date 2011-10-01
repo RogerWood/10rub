@@ -15,16 +15,6 @@ compile '/assets/styles/*/' do
    filter :rainpress
 end
 
-#compile '/series/*/*/' do
-#   filter :kramdown, :auto_ids => false
-#   layout 'coin'
-#end
-
-#compile '/series/*/' do
-#   filter :kramdown, :auto_ids => false
-#   layout 'series'
-#end
-
 compile '*' do
    if item.binary?
       # бинарные файлы не трогаем
@@ -38,7 +28,7 @@ compile '*' do
                when 'advanced' then
                   filter :kramdown, :auto_ids => false
                when 'basic' then
-                  filter :rdiscount # или :bluecloth?
+                  filter :bluecloth
             end
       end
 

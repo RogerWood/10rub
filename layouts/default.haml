@@ -21,10 +21,16 @@
          %tr
             %td 
                #content_container
-                  .reducer
-                     = yield 
+               .reducer
+
+                  %h2= @item[:post_title]
+
+                  = if @item[:sub_layout] then render "_#{@item[:sub_layout]}" end
+
+                  = yield
             %td
                #navigation
+
                   = link_to_unless_current('Главная', '/') 
                   = link_to_unless_current('О сайте', '/about.html') 
       
@@ -35,4 +41,4 @@
                   = link_to_unless_current('Российская Федерация', '/series/rossijskaja-federacija/')
                   = link_to_unless_current('Древние города России', '/series/.../')
          
-      = render 'footer'
+      = render '_footer'
