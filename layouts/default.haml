@@ -5,6 +5,7 @@
       %meta{ "charset" => "UTF-8" }
          %title
             = @item[:has_full_title] ? @item[:title] : "#{@item[:title]} &rsaquo; nanoc"
+         %link{ :rel => "icon", :type => "image/png", :href => "/favicon.png" }
          %link{ :rel => "stylesheet", :href => "/screen.css", :type => "text/css", :media => "screen" }
 
    %body     	        
