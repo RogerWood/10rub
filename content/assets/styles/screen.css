@@ -217,6 +217,27 @@ hr {
    background-color: #c33;
 }
 
+/* таблица монеты */
+
+.coin {
+   font-size: 150%;
+   margin: 0;
+   width: 100%;
+}
+
+.coin .col1 {
+   width: 530px;
+}
+
+.coin .col2,
+.coin .col3 {
+   vertical-align: middle;
+}
+
+.coin .col2 {
+   width: 200px;
+}
+
 /* подножие шаблона */
 
 #footer {
