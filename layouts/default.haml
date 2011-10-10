@@ -22,13 +22,13 @@
          %tr
             %td 
                #content_container
-               .reducer
+                  .reducer
 
-                  %h2= @item[:post_title]
+                     %h2= @item[:post_title]
 
-                  = if @item[:sub_layout] then render "_#{@item[:sub_layout]}" end
+                     = if @item[:sub_layout] then render "_#{@item[:sub_layout]}" end
 
-                  = yield
+                     = yield
             %td
                #navigation
 
