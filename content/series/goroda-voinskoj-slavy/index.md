@@ -115,8 +115,8 @@ __Город воинской славы__ --- почётное звание Р�
 <tbody>
 <tr>
    <td>1</td>
-   <td>[Белгород](belgorod/)</td>
-   <td>[5714-0002][]</td>
+   <td><a href="belgorod/">Белгород</a></td>
+   <td><a href="http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0002">5714-0002</a></td>
    <td>23 мая</td>
    <td>СП</td>
    <td>10 млн</td>
@@ -124,8 +124,8 @@ __Город воинской славы__ --- почётное звание Р�
 </tr>
 <tr>
    <td>2</td>
-   <td>[Курск](kursk/)</td>
-   <td>[5714-0003][]</td>
+   <td><a href="kursk/">Курск</a></td>
+   <td><a href="http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0003">5714-0003</a></td>
    <td>30 июня</td>
    <td>СП</td>
    <td>10 млн</td>
@@ -133,8 +133,8 @@ __Город воинской славы__ --- почётное звание Р�
 </tr>
 <tr>
    <td>3</td>
-   <td>[Орёл](orel/)</td>
-   <td>[5714-0004][]</td>
+   <td><a href="orel/">Орел</a></td>
+   <td><a href="http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0004">5714-0004</a></td>
    <td>30 июня</td>
    <td>СП</td>
    <td>10 млн</td>
@@ -142,8 +142,8 @@ __Город воинской славы__ --- почётное звание Р�
 </tr>
 <tr>
    <td>4</td>
-   <td>[Владикавказ](vladikavkaz/)</td>
-   <td>[5714-0005][]</td>  
+   <td><a href="vladikavkaz/">Владикавказ</a></td>
+   <td><a href="http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0005">5714-0005</a></td>  
    <td>1 июля</td>
    <td>СП</td>
    <td>10 млн</td>
@@ -151,8 +151,8 @@ __Город воинской славы__ --- почётное звание Р�
 </tr>
 <tr>
    <td>5</td>
-   <td>[Малгобек](malgobek/)</td>
-   <td>[5714-0006][]</td>  
+   <td><a href="malgobek/">Малгобек</a></td>
+   <td><a href="http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0006">5714-0006</a></td>  
    <td>1 августа</td>
    <td>СП</td>
    <td>10 млн</td>
@@ -160,8 +160,8 @@ __Город воинской славы__ --- почётное звание Р�
 </tr>
 <tr>
    <td>6</td>
-   <td>[Ржев](rzhev/)</td>
-   <td>[5714-0007][]</td>
+   <td><a href="rzhev/">Ржев</a></td>
+   <td><a href="http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0007">5714-0007</a></td>
    <td>1 сентября</td>
    <td>СП</td>
    <td>10 млн</td>
@@ -169,16 +169,16 @@ __Город воинской славы__ --- почётное звание Р�
 </tr>
 <tr>
    <td>7</td>
-   <td>Ельня</td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
+   <td>Елец</td>
+   <td><a href="http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0008">5714-0008</a></td>
+   <td>3 октября</td>
+   <td>СП</td>
+   <td>10 млн</td>
    <td class="red" />
 </tr>
 <tr>
    <td>8</td>
-   <td>Елец</td>
+   <td>Ельня</td>
    <td></td>
    <td></td>
    <td></td>
@@ -187,27 +187,6 @@ __Город воинской славы__ --- почётное звание Р�
 </tr>
 </tbody>
 </table>
-
-## 2011
-
-| № |             Город           |    Каталог    |    Дата    | МД | Тираж  | |
-|---|-----------------------------|---------------|-----------------|-----------
-| 1 | [Белгород](belgorod/)       | [5714-0002][] | 23 мая     | СП | 10 млн |+|
-| 2 | [Курск](kursk/)             | [5714-0003][] | 30 июня    | СП | 10 млн |+|
-| 3 | [Орёл](orel/)               | [5714-0004][] | 30 июня    | СП | 10 млн |+|
-| 4 | [Владикавказ](vladikavkaz/) | [5714-0005][] | 1 июля     | СП | 10 млн |-|
-| 5 | [Малгобек](malgobek/)       | [5714-0006][] | 1 августа  | СП | 10 млн |-|
-| 6 | [Ржев](rzhev/)              | [5714-0007][] | 1 сентября | СП | 10 млн |-|
-| 7 | Ельня                       |               |            |    |        |-|
-| 8 | Елец                        |               |            |    |        |-|
-{:.series}
-
-[5714-0002]: http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0002
-[5714-0003]: http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0003
-[5714-0004]: http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0004
-[5714-0005]: http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0005
-[5714-0006]: http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0006
-[5714-0007]: http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=5714-0007
 
 ## Хронология событий
 
