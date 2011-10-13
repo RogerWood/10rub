@@ -3,15 +3,20 @@
 
    %head
       %meta{ "charset" => "UTF-8" }
-         %title
-            = @item[:has_full_title] ? @item[:title] : "#{@item[:title]} &rsaquo; nanoc"
+         %title<
+         
+            - breadcrumbs_trail.reverse_each do |b|
+               - if b
+                  = b[:head_title]
+                  = ' :: ' if b != breadcrumbs_trail.first 
+           
          %link{ :rel => "icon", :type => "image/png", :href => "/favicon.png" }
          %link{ :rel => "stylesheet", :href => "/screen.css", :type => "text/css", :media => "screen" }
          %link{ :href => "http://fonts.googleapis.com/css?family=PT+Serif:700&subset=cyrillic,latin", :rel => "stylesheet", :type => "text/css" }
 
-   %body     	        
+   %body
       %table#content
-         %tr 
+         %tr
             %td{ :width => "8%", :rowspan => "2" }
             %td{ :width => "69%" }
                #logo Editorium.ru
@@ -26,21 +31,20 @@
                   .reducer
 
                      %h2= @item[:post_title]
-
-                     = if @item[:sub_layout] then render "_#{@item[:sub_layout]}" end
-
+                     
+                     = render "_#{@item[:sub_layout]}" if @item[:sub_layout]
                      = yield
             %td
-               #navigation
-
+               %nav
+               
                   = link_to_unless_current('Главная', '/') 
                   = link_to_unless_current('О сайте', '/about.html') 
-      
+
                   %h2 Серии
-      
+
                   = link_to_unless_current('Города воинской славы', '/series/goroda-voinskoj-slavy/') 
                   = link_to_unless_current('200-летие образования министерств', '/series/200letie-obrazovanija-ministerstv/')
                   = link_to_unless_current('Российская Федерация', '/series/rossijskaja-federacija/')
                   = link_to_unless_current('Древние города России', '/series/.../')
-         
+
       = render '_footer'

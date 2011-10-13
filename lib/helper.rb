@@ -9,3 +9,6 @@ Nanoc3::Helpers::Tagging
 
 # карта сайта для поисковых систем
 include Nanoc3::Helpers::XMLSitemap
+
+# иерархия вложенности
+include Nanoc3::Helpers::Breadcrumbs 

@@ -15,6 +15,10 @@ compile '/assets/styles/*/' do
    filter :rainpress
 end
 
+compile '/sitemap/' do
+   filter :erb
+end
+
 compile '*' do
    if item.binary?
       # бинарные файлы не трогаем
@@ -48,6 +52,10 @@ end
 
 route '/assets/styles/*/' do
    item.identifier[14..-2] + '.css'
+end
+
+route '/sitemap/' do
+   '/sitemap.xml'
 end
 
 route '*' do

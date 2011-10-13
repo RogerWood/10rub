@@ -39,6 +39,35 @@ a:focus {
    outline: none;
 }
 
+blockquote {
+	background: #075698;
+	color: #fff;
+	margin: 1em 0 1.5em 5em;
+   padding: 1px 15px;
+	position: relative;
+   /* CSS3 */
+   border-radius: 10px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#2e88c4), to(#075698));
+	background: -moz-linear-gradient(#2e88c4, #075698);
+	background: -o-linear-gradient(#2e88c4, #075698);
+	background: linear-gradient(#2e88c4, #075698);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+blockquote:after {
+   border-color: #075698 transparent; 
+   border-style: solid;
+   border-width: 20px 0 0 20px;
+   bottom: -20px; /* value = - border-top-width - border-bottom-width */
+   content: "";
+   left: 50px; /* controls horizontal position */
+   position: absolute;
+   /* reduce the damage in FF3.0 */
+   display:block; 
+   width:0;
+}
+
 img {
    border: none;
 }
@@ -133,27 +162,27 @@ hr {
 
 /* навигационная панель */
 
-#navigation {
+nav {
    font-family: arial, sans-serif;
    font-size: 85%;
    margin: 4.5em 0 2em 0;
 }
 
-#navigation h2 {
+nav h2 {
    font-family: Georgia, serif;
 }
 
-#navigation a,
-#navigation span {
+nav a,
+nav span {
    display: block;
    margin: 0 0 0.3em 0;
 }
 
-#navigation a:visited {
+nav a:visited {
    color: #05c;
 }
 
-#navigation a:visited:hover {
+nav a:visited:hover {
    color: #c00;
 }
 
@@ -226,7 +255,7 @@ hr {
 /* таблица монеты */
 
 .coin {
-   font-size: 150%;
+   font-size: 120%;
    margin: 0;
    width: 100%;
 }
@@ -241,12 +270,12 @@ hr {
 }
 
 .coin .col2 {
-   width: 200px;
+   width: 160px;
 }
 
 /* подножие шаблона */
 
-#footer {
+footer {
    background: #f8f7f7 url("img/footer-bg.png") center top;
    border-top: 1px solid #ccc;
    float: left;
@@ -255,7 +284,7 @@ hr {
    width: 100%;
 }
 
-#footer h3 {
+footer h3 {
    margin: 20px 0 -10px;
 }
 
