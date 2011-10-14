@@ -11,4 +11,7 @@ Nanoc3::Helpers::Tagging
 include Nanoc3::Helpers::XMLSitemap
 
 # иерархия вложенности
-include Nanoc3::Helpers::Breadcrumbs 
+include Nanoc3::Helpers::Breadcrumbs
+
+# собственная доработка
+include Nanoc3::Helpers::BreadcrumbsTitle
