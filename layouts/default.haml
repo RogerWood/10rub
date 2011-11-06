@@ -11,34 +11,26 @@
    %body
       %table#content
          %tr
-            %td{ :width => "8%", :rowspan => "2" }
-            %td{ :width => "69%" }
-               #logo Editorium.ru
-            %td{ :width => "23%" }
+            %td{ :width => "8%" }
+            %td{ :width => "64%" }
+               %a{ :href => "/" }
+                  %img{ :src => "/assets/img/logo.png", :height => "200", :width => "179" }
+            %td{ :width => "20%" }
                #search
-                  .reducer
-                     %form{ :action => "/search/", :method => "get" }
-                        %input{ :type => "search", :autocomplete => "off", :placeholder => "Поиск", :name => "query", :value => "" }
+                  %form{ :action => "/search/", :method => "get" }
+                     %input{ :type => "search", :autocomplete => "off", :placeholder => "Поиск", :name => "query", :value => "" }
+            %td{ :width => "8%" }
          %tr
-            %td 
+            %td#new-coin{ :colspan => "4" }
+         %tr
+            %td{ :width => "8%" }
+            %td{ :width => "84%", :colspan => "2" }
                #content_container
-                  .reducer
 
-                     %h2= @item[:post_title]
-                     
-                     = render "_#{@item[:sub_layout]}" if @item[:sub_layout]
-                     = yield
-            %td
-               %nav
-               
-                  = link_to_unless_current('Главная', '/') 
-                  = link_to_unless_current('О сайте', '/about.html') 
+                  %h2= @item[:post_title]
+                  = render "_#{@item[:sub_layout]}" if @item[:sub_layout]
+                  = yield
 
-                  %h2 Серии
-
-                  = link_to_unless_current('Города воинской славы', '/series/goroda-voinskoj-slavy/') 
-                  = link_to_unless_current('200-летие образования министерств', '/series/200letie-obrazovanija-ministerstv/')
-                  = link_to_unless_current('Российская Федерация', '/series/rossijskaja-federacija/')
-                  = link_to_unless_current('Древние города России', '/series/.../')
+            %td{ :width => "8%" }
 
       = render '_footer'
