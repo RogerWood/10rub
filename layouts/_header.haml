@@ -1,0 +1,21 @@
+%header
+   %table
+      %tr
+         %td{ :width => "8%" }
+
+         %td{ :width => "44%" }
+            %a{ :href => "/" }
+               %img{ :src => "/assets/img/logo.png", :height => "200", :width => "179" }
+
+         %td{ :width => "20%" }
+            В коллекции
+            %span.num-series
+               = number_of_series
+               = tail_series
+
+         %td{ :width => "20%" }
+            #search
+               %form{ :action => "/search/", :method => "get" }
+                  %input{ :type => "search", :autocomplete => "off", :placeholder => "Поиск", :name => "query", :value => "" }
+
+         %td{ :width => "8%" }
