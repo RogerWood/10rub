@@ -27,6 +27,12 @@ compile '*' do
        
       # определение по расширению    
       case item[:extension]
+
+         #
+         when 'haml'
+            filter :haml
+            
+         #
          when 'md', 'markdown' then
             case item[:markdown]
                when 'advanced' then
@@ -35,14 +41,8 @@ compile '*' do
                   filter :bluecloth
             end
       end
-
-      layout 'default'
-      
-      #if @item[:layout]
-      #   layout(@item[:layout])
-      #elsif @item[:kind] == 'article'
-      #   layout 'article'
-      #end
+ 
+      layout (item[:layout] ? item[:layout].to_s : 'default')
   end
 end
 
@@ -61,10 +61,7 @@ end
 route '*' do
    if item.binary?    
       # бинарные файлы должны иметь нормальный необрезанный путь
-      item.identifier.chop + '.' + item[:extension]  
-   elsif item[:is_partial] || item[:kind] == 'article'
-      # не выводить частичные шаблоны, стили и прочее
-      nil 
+      item.identifier.chop + '.' + item[:extension]
    else
       # каждый файл в отдельную директорию
       rep.item.identifier + 'index.html'
@@ -76,4 +73,3 @@ end
 #
 
 layout '*', :haml, :format => :html5, :ugly => true
-
