@@ -131,6 +131,15 @@ header table {
    width: 100%;
 }
 
+.stats {
+   font-size: 150%;   
+}
+
+.stats .num {
+   font-weight: bold;
+   text-align: right;
+}
+
 /* основная часть */
 
 #content {
@@ -188,32 +197,21 @@ nav a:visited:hover {
 
 /* список серий */
 
-.series-trumbs {
-   /* Компенсируем отступы между float-блоками, чтобы они занимали все доступное пространство */
-   margin: -3em 0 0 -2em;
-   text-align: center;
+ul.trumb-series {
+   list-style: none;
+   margin: 0;
+   padding: 0;
 }
 
-.series-trumb {
-   /* Следующее правило для Firefox 2 */
-   display: -moz-inline-box;
-   /* а это для остальных */
-   display: inline-block;
-   vertical-align: top;
-   /* Убираем выравнивание по центру */
-   text-align: left;
-   /* Отступы между блоками */
-   margin: 3em 0 0 2em;
-}
-
-.series-trumb .r
-{
-   /* Если есть необходимость, то свойства padding, border, background и position со значением relative
-   лучше задавать у этого элемента -- это несколько расширит количество поддерживаемых версий браузеров */
-   /* Задаем минимальную ширину по тексту */
-   width: 14em;
-   /* Минимальная ширина в пикселях будет автоматически рассчитываться по ширине картинки */
+.trumb-series li {
    float: left;
+   margin: 0 2%;
+   padding: 0;
+   width: 21%;
+}
+
+.trumb-series h3 {
+   margin: 0.5em 0 0.5em 0;
 }
 
 /* таблица серий монет */
@@ -318,4 +316,3 @@ footer {
 footer h3 {
    margin: 20px 0 -10px;
 }
-

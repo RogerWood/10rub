@@ -9,9 +9,14 @@
 
          %td{ :width => "20%" }
             В коллекции
-            %span.num-series
-               = number_of_series
-               = tail_series
+
+            %table.stats
+               %tr
+                  %td.num= number_of_series
+                  %td= tail_series
+               %tr
+                  %td.num= number_of_coins
+                  %td= tail_coins
 
          %td{ :width => "20%" }
             #search
