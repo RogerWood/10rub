@@ -163,7 +163,7 @@ header table {
 }
 
 #new-coin {
-   background: #f8f7f7 url("/assets/img/newcoin-bg.png") center top;
+   background: #88181e url("/assets/img/newcoin-bg1.png") center top; /* найти текстуру */
    border-top: 2px solid #000;
    border-bottom: 2px solid #000;
    height: 300px;
@@ -199,8 +199,9 @@ nav a:visited:hover {
 
 ul.trumb-series {
    list-style: none;
-   margin: 0;
+   margin: -1em -2% 0;
    padding: 0;
+   width: 104%;
 }
 
 .trumb-series li {
@@ -211,7 +212,7 @@ ul.trumb-series {
 }
 
 .trumb-series h3 {
-   margin: 0.5em 0 0.5em 0;
+   margin: 2em 0 0.5em 0;
 }
 
 /* таблица серий монет */
@@ -233,6 +234,10 @@ ul.trumb-series {
 .series .year {
    font-weight: bold;
    font-size: 130%;
+}
+
+.series tbody tr:nth-child(even) {
+   background-color: #eee;
 }
 
 .series td {
