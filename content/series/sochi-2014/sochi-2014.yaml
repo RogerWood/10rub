@@ -4,9 +4,9 @@ sub_layout:         coin
 head_title:         Сочи 2014
 post_title:         Сочи 2014
 
-image:              -
-image_height:       -
-image_width:        -
+image:              http://farm8.staticflickr.com/7015/6412270785_01aeef9f40.jpg
+image_height:       250
+image_width:        500
 
 catalogue_num:      -
 date_of_issue:      -
