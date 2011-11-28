@@ -1,6 +1,11 @@
 %p 
 	“All of Hashrocket’s new projects are done in Haml, and we’ve now decided to transition everything else in our portfolio over to Haml as soon as possible. The indentation-based approach works wonders for generating clean, semantic markup and the way that you can see the structure of your markup in a way that easily maps to CSS rules is simply brilliant.” - ‘Are you using Haml?’ - Obie Fernandez
 
+<% @site.sorted_articles[0, 10].each do |article| %>
+<%= article[:post_title] %><br/>
+<%= article[:created_at] %><br/>
+<% end %>
+
 %ul.trumb-series
 
 	%li

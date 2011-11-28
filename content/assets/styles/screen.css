@@ -163,7 +163,7 @@ header table {
 }
 
 #new-coin {
-   background: #88181e url("/assets/img/newcoin-bg1.png") center top; /* найти текстуру */
+   background: #88181e url("/assets/img/newcoin-bg.png") center top;
    border-top: 2px solid #000;
    border-bottom: 2px solid #000;
    height: 300px;

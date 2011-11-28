@@ -16,3 +16,6 @@ include Nanoc3::Helpers::Breadcrumbs
 # собственная доработка
 include Nanoc3::Helpers::BreadcrumbsTitle
 include Nanoc3::Helpers::Series
+
+# todo: определиться нужно ли?
+include Nanoc3::Helpers::Blogging
