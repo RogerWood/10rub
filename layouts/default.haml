@@ -3,32 +3,25 @@
 
    %head
       %meta{ "charset" => "UTF-8" }
-         %title= breadcrumbs_title       
-         %link{ :rel => "icon", :type => "image/png", :href => "/favicon.png" }
-         %link{ :rel => "stylesheet", :href => "/screen.css", :type => "text/css", :media => "screen" }
-         %link{ :href => "http://fonts.googleapis.com/css?family=PT+Serif:700&subset=cyrillic,latin", :rel => "stylesheet", :type => "text/css" }
+      %title= breadcrumbs_title       
+      %link{ :rel => "icon", :type => "image/png", :href => "/favicon.png" }
+      %link{ :rel => "stylesheet", :href => "/screen.css", :type => "text/css", :media => "screen" }
+      %link{ :href => "http://fonts.googleapis.com/css?family=PT+Serif:700&subset=cyrillic,latin", :rel => "stylesheet", :type => "text/css" }
 
    %body
+   
+      = render '_header'
+      
       %table#content
          %tr
-            %td{ :width => "8%", :rowspan => "2" }
-            %td{ :width => "69%" }
-               #logo Editorium.ru
-            %td{ :width => "23%" }
-               #search
-                  .reducer
-                     %form{ :action => "/search/", :method => "get" }
-                        %input{ :type => "search", :autocomplete => "off", :placeholder => "Поиск", :name => "query", :value => "" }
-         %tr
-            %td 
-               #content_container
-                  .reducer
-
-                     %h2= @item[:post_title]
-                     
-                     = render "_#{@item[:sub_layout]}" if @item[:sub_layout]
-                     = yield
-            %td
+            %td{ :width => "8%" }
+            %td{ :width => "64%" }
+               .offset
+                  %h2= @item[:post_title]
+                  = render "_#{@item[:sub_layout]}" if @item[:sub_layout]
+                  = yield
+                  
+            %td{ :width => "28%" }
                %nav
                
                   = link_to_unless_current('Главная', '/') 

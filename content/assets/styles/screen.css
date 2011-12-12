@@ -146,9 +146,8 @@ header table {
    margin: 0;
 }
 
-#content_container {
-   clear: both;
-   width: 100%;
+#content .offset {
+   margin-right: 2.5em;
 }
 
 #search {
