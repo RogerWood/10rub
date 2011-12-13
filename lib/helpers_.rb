@@ -5,7 +5,7 @@ include Nanoc3::Helpers::LinkTo
 include Nanoc3::Helpers::Rendering
 
 # теги
-Nanoc3::Helpers::Tagging
+include Nanoc3::Helpers::Tagging
 
 # карта сайта для поисковых систем
 include Nanoc3::Helpers::XMLSitemap
@@ -16,6 +16,7 @@ include Nanoc3::Helpers::Breadcrumbs
 # собственная доработка
 include Nanoc3::Helpers::BreadcrumbsTitle
 include Nanoc3::Helpers::Series
+include Nanoc3::Helpers::Coins
 
 # todo: определиться нужно ли?
 include Nanoc3::Helpers::Blogging

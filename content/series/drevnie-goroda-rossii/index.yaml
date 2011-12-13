@@ -1,10 +1,8 @@
-markdown:       basic
+layout:         series
+markdown:       advanced
 
 head_title:     Серия «Древние города России»
 post_title:     Серия «Древние города России»
-
-kind:           article
-created_at:     "2008-10-11 20:42:00"
 
 title_series:   Древние города России
 href_series:    "drevnie-goroda-rossii"

@@ -1,0 +1,37 @@
+!!!
+%html{ :lang => "ru" }
+
+   %head
+      %meta{ "charset" => "UTF-8" }
+      %title= breadcrumbs_title       
+      %link{ :rel => "icon", :type => "image/png", :href => "/favicon.png" }
+      %link{ :rel => "stylesheet", :href => "/screen.css", :type => "text/css", :media => "screen" }
+      %link{ :href => "http://fonts.googleapis.com/css?family=PT+Serif:700&subset=cyrillic,latin", :rel => "stylesheet", :type => "text/css" }
+
+   %body
+   
+      = render '_header'
+      
+      %table#content
+         %tr
+            %td{ :width => "8%" }
+            %td{ :width => "64%" }
+               .offset
+                  %h2= @item[:post_title]
+                  = render "_#{@item[:sub_layout]}" if @item[:sub_layout]
+                  = yield
+                  
+            %td{ :width => "28%" }
+               %nav
+               
+                  = link_to_unless_current('Главная', '/') 
+                  = link_to_unless_current('О сайте', '/about.html') 
+
+                  %h2 Серии
+
+                  = link_to_unless_current('Города воинской славы', '/series/goroda-voinskoj-slavy/') 
+                  = link_to_unless_current('200-летие образования министерств', '/series/200letie-obrazovanija-ministerstv/')
+                  = link_to_unless_current('Российская Федерация', '/series/rossijskaja-federacija/')
+                  = link_to_unless_current('Древние города России', '/series/.../')
+
+      = render '_footer'
