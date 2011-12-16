@@ -11,3 +11,16 @@
 
          %a{ :href => "/series/#{s[:href_series]}/" }
             %img{ :src => "/assets/img/#{s[:href_series]}-logo.jpg", :width => "100%" }
+
+         - if coins_from_series(s).size > 0
+            %div<
+               
+               - if coins_from_series(s).size == s[:size_series]
+                  Полная коллекция
+
+               - else
+                  = coins_from_series(s).size
+
+                  - if s[:size_series]
+                     из #{s[:size_series]}
+
