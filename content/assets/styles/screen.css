@@ -12,7 +12,7 @@ html {
 body {
    font-family: Georgia, serif;
    font-size: 100.01%;
-   line-height: 1.4;
+   line-height: 1.5;
    margin: 0;
    min-width: 900px;
    padding: 1em 0 0 0;
@@ -83,6 +83,10 @@ td {
    position: static;
 }
 
+h1, h2, h3, h4, h5 {
+   font-family: 'PT Serif', serif;
+}
+
 h1, h5 {
    font-size: 260%;
    line-height: 1.2;
@@ -97,7 +101,6 @@ h2 {
 }
 
 h3 {
-   font-family: 'PT Serif', serif;
    font-size: 120%;
    font-weight: bold;
    margin: 2.5em 0 1em 0;
@@ -319,4 +322,16 @@ footer {
 
 footer h3 {
    margin: 20px 0 -10px;
+}
+
+.sign {
+   background: #f0f0f0;
+   float: left;
+   margin: 5px 0 20px;
+   padding: 7px;
+   text-align: center;
+}
+
+.sign p {
+   font-size: 75%;
 }
