@@ -1,20 +1,28 @@
 %footer
-   %table
-      %tr
-         %td{ :width => "8%" }
-         %td{ :width => "34%" }
-            
-            %h3 Хотите увидеть другие коллекции монет?
-            %p У меня есть еще коллекция больших монет, так называемых "шайб".
-            
-         %td{ :width => "1%" }
-         %td{ :width => "34%" }                  
-         
-            %p 
-               Все комментарии, советы, предложения и правки присылайте по адресу 
-               %a{ :href => "q" }
-                  Почта
-    
-         %td{ :width => "23%", :class => "copyright_rogerwood" }
-         
-            %p &copy;&nbsp;2011 Roger&nbsp;Wood
+
+   #foot-info
+      .wrap
+
+         #about
+            %h3 О сайте
+
+            Небольшой сайт заметок о монетах, которые вы с легкостью можете собирать вместе со мной.
+
+         #social
+            %h3 Подписка
+
+            Вы сэкономите себе время, если подпишетесь на обновления через популярные сервисы.
+
+            %p
+               %a{ :href => "#", :class => "rss-count" } RSS
+               %a{ :href => "#", :class => "twitter-count" } Twitter
+
+         #counting
+            %img{ :src => "/assets/img/bucket.png", :alt => "Логотип сайта", :width => "150", :height => "150" }
+            %br
+            счетчики
+
+   #legal
+      .wrap
+      
+         %p &copy;&nbsp;2011 Roger&nbsp;Wood

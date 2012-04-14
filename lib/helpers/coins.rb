@@ -12,7 +12,7 @@ module Nanoc3::Helpers
       
       def coins
       
-         @items.select { |c| c[:sub_layout] == 'coin' }
+         @items.select { |c| c[:layout] == 'coin' }
          
       end
       
@@ -33,7 +33,7 @@ module Nanoc3::Helpers
       
       def coins_from_series(series)
       
-         series.children.select { |c| c[:sub_layout] == 'coin' }
+         series.children.select { |c| c[:layout] == 'coin' }
       
       end
 

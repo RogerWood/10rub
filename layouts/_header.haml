@@ -1,9 +1,8 @@
 %header
    %table
       %tr
-         %td{ :width => "8%" }
 
-         %td{ :width => "44%" }
+         %td{ :width => "54%" }
             %a{ :href => "/" }
                %img{ :src => "/assets/img/logo.png", :height => "200", :width => "179" }
 
@@ -18,9 +17,12 @@
                   %td.num= coins.size
                   %td= tail_coins
 
-         %td{ :width => "20%" }
+         %td{ :width => "26%" }
+         
             #search
-               %form{ :action => "/search/", :method => "get" }
-                  %input{ :type => "search", :autocomplete => "off", :placeholder => "Поиск", :name => "query", :value => "" }
+               %form{ :method => "get", :id => "searchform", :action => "http://www.premiumpixels.com" }
+                  %fieldset
+                     %input{ :type => "text", :name => "s", :id => "s", :value => "Какую монету ищем?", :onfocus => "if(this.value=='Какую монету ищем?')this.value='';", :onblur => "if(this.value=='')this.value='Какую монету ищем?';", :style => "border-top-color: rgb(212, 212, 216); border-right-color: rgb(212, 212, 216); border-bottom-color: rgb(212, 212, 216); border-left-color: rgb(212, 212, 216); color: rgb(209, 210, 215); " }
 
-         %td{ :width => "8%" }
+                     #search-arrow-wrap
+                        #search-arrow

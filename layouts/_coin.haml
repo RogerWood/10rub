@@ -1,7 +1,7 @@
 %table{ :class => "coin" }
     %tr
-        %td{ :class => "col1" }
-            %img{ :src => "#{@item[:image]}", :height => "#{@item[:image_height]}", :width => "#{@item[:image_width]}" }
+        %td
+            %img{ :src => "/assets/img/#{@item[:image]}.png", :height => "#{@item[:image_height]}", :width => "#{@item[:image_width]}" }
 
         %td{ :class => "col2" }
             .catalogue_num Каталожный №
@@ -11,7 +11,8 @@
             .mintage Тираж
 
         %td{ :class => "col3" }
-            = @item[:catalogue_num]
+            %a{ :href => "http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=#{@item[:catalogue_num]}" }
+                = @item[:catalogue_num]
             %br
             = @item[:date_of_issue]
             %br

@@ -1,18 +1,25 @@
 #!/usr/bin/env ruby
 
+require 'compass'
+
+Compass.add_project_configuration('config.rb')
+
 #
 # сompilation #################################################################
 #
 
 # частичные шаблоны обозначаются подчеркиванием 
-compile '/assets/styles/_*/' do   
+compile '/assets/css/_*/' do   
    # не обрабатывать и не выкладывать
 end
  
-compile '/assets/styles/*/' do
-   #filter :sass, Compass.sass_engine_options
-   #filter :relativize_paths, :type => :css
-   filter :rainpress
+compile '/assets/css/*/' do
+   filter :sass, Compass.sass_engine_options
+   #filter :rainpress
+end
+
+compile '/assets/js/*/' do
+   # не обрабатывать
 end
 
 compile '/sitemap/' do
@@ -50,8 +57,12 @@ end
 # routing #####################################################################
 #
 
-route '/assets/styles/*/' do
-   item.identifier[14..-2] + '.css'
+route '/assets/css/*/' do
+   item.identifier[11..-2] + '.css'
+end
+
+route '/assets/js/*/' do
+   item.identifier.chop + '.' + item[:extension]
 end
 
 route '/sitemap/' do

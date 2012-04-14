@@ -13,6 +13,17 @@ module Nanoc3::Helpers
          
       end
 
+      #
+      #
+      #
+
+      def series_from_name(name)
+
+         series.detect { |s| s[:title_series] == name }
+
+      end
+
+
       # возвращает отсортированный список серий, 
       # т.е. элементов, для которых установлен шаблон 'series'. 
       # Серии сортируются по убыванию даты покупки.
