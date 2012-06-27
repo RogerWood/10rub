@@ -1,0 +1,220 @@
+@import "base"
+@import "compass/css3/border-radius"
+@import "compass/utilities/tables"
+
+body
+    +blueprint-typography-body
+
+// ссылки
+
+a
+    +link-colors(#05c, #f00, #909, #909, #f00)
+
+a:hover
+    text-decoration: none
+
+// заголовки
+
+h1, h2, h3, h4, h5
+    font:
+        family: 'PT Serif', serif
+        weight: bold
+
+h1, h5
+    font:
+        size: 260%
+        weight: normal
+    line-height: 1.2
+    margin: 0.33em 0 0.6em 0
+
+h2
+    font-size: 150%
+    margin: 2.5em 0 1em 0
+
+h3
+    font-size: 120%
+    margin: 1em 0 1em 0
+
+h4
+    font-size: 100%
+    margin: 2em 0 1em 0
+
+h5
+    margin: -0.1em 0 0 0
+
+// разное
+
+p
+    margin: 0 0 1em
+
+.stats
+    font-size: 150%
+
+    .num
+        font-weight: bold
+        text-align: right
+
+// заглавие документа
+
+#post-title
+    +container
+
+#container
+    +container
+    // see ie.sass for details:
+    padding: 30px 0
+    text-align: left
+
+    #content
+        +column(ceil($blueprint-grid-columns * 2 / 3) - 1)
+        +append(1)
+
+    #sidebar
+        +column(floor($blueprint-grid-columns / 3), true)
+
+// подножие документа
+
+.wrap
+    +container
+    text-align: left
+
+footer
+    p
+        margin: 0
+
+    font:
+        family: Arial
+        size: 80%
+
+#foot-info
+    background-color: #f4f4f4
+    border-top: 1px solid #e8e8e8
+    border-bottom: 1px solid #e8e8e8
+    padding: 20px 0
+    width: 100%
+
+#about
+    +column(10)
+    +append(1)
+
+#social
+    +column(6)
+    +append(1)
+
+    a
+        display: block
+        height: 15px
+        line-height: 15px
+        margin: 10px 0
+        padding: 0 0 0 23px
+
+        &.rss-count
+            background: url(/assets/img/sprite.png) no-repeat -73px 0
+
+        &.rss-count:hover
+            background: url(/assets/img/sprite.png) no-repeat -73px -48px
+    
+        &.twitter-count
+            background: url(/assets/img/sprite.png) no-repeat -73px -32px
+
+        &.twitter-count:hover
+            background: url(/assets/img/sprite.png) no-repeat -73px -80px
+
+    p
+        margin-left: 20px
+
+#counting
+    +column(6, true)
+
+#legal
+    padding: 20px 0
+
+    
+    
+// навигационная панель
+
+nav
+    font-family: arial, sans-serif
+    font-size: 85%
+    margin: 4.5em 0 2em 0
+
+    h2
+        font-family: Georgia, serif
+
+    a, span
+        display: block
+        margin: 0 0 0.3em 0
+
+    a:visited
+        color: #05c
+
+    a:visited:hover
+        color: #c00
+
+// серии монет
+
+.table-series
+    +container
+
+    .col
+        +column((ceil($blueprint-grid-columns * 2 / 3) - 1) / 3)
+
+    .col-last
+        +column((ceil($blueprint-grid-columns * 2 / 3) - 1) / 3, true)
+
+    table
+        +border-radius
+        +inner-table-borders(1px, #ddd)
+        +outer-table-borders(1px, #ddd)
+        +table-scaffolding
+
+        border-collapse: separate
+        *border-collapse: collapsed
+        border-spacing: 0
+        font:
+            family: Arial
+        width: 100%
+
+        th
+            background-color: #fff
+
+        tr:nth-child(odd)
+            background-color: #f9f9f9
+
+        th, td
+            padding: 5px
+            vertical-align: middle
+
+        td.green
+            background-color: #3c3
+
+        td.yellow
+            background-color: #cc3
+
+        td.red 
+            background-color: #c33
+
+// описание монет
+
+#coin
+    +border-left-radius(20px)
+    +container
+    background-color: #88181e
+    padding: 20px
+
+    #photo
+        +column(ceil($blueprint-grid-columns * 2 / 3))
+
+    #desc
+        +column(ceil($blueprint-grid-columns / 3), true)
+
+    table
+        color: #fff
+        font-size: 120%
+
+    .cat
+        width: 170px
+
+    .val
+        font-weight: bold
+

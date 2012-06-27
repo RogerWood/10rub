@@ -1,0 +1,80 @@
+!!!
+%html{ :lang => "ru" }
+
+    %head
+        %meta{ "charset" => "UTF-8" }
+        %title= breadcrumbs_title   
+                
+        %link{ :rel => "icon", :type => "image/png", :href => "/favicon.png" }
+        %link{ :rel => "stylesheet", :href => "/screen.css", :type => "text/css", :media => "screen, projection" }
+        %link{ :rel => "stylesheet", :href => "/print.css", :type => "text/css", :media => "print" }
+
+        /[if IE]
+            %link{ :rel => "stylesheet", :href => "/ie.css", :type => "text/css", :media => "screen, projection" }
+
+        %link{ :href => "http://fonts.googleapis.com/css?family=PT+Serif:700&subset=cyrillic,latin", :rel => "stylesheet", :type => "text/css" }
+
+    %body
+
+        = render '_header'
+
+        #post-title
+        
+            %h2= @item[:post_title]
+
+        #coin
+
+            #photo
+                %img{ :src => "/assets/img/#{@item[:image]}.png", :height => "#{@item[:image_height]}", :width => "#{@item[:image_width]}" }
+
+            #desc
+                %table
+                    %td.cat
+                        .catalogue_num Каталожный №
+                        .date_of_issue Дата выпуска
+                        .diameter Диаметр
+                        .mass Масса
+                        .mintage Тираж
+
+                    %td.val
+                        %a{ :href => "http://cbr.ru/bank-notes_coins/base_of_memorable_coins/coins1.asp?cat_num=#{@item[:catalogue_num]}" }
+                            = @item[:catalogue_num]
+                        %br
+                        = @item[:date_of_issue]
+                        %br
+                        = @item[:diameter]
+                        %br
+                        = @item[:mass]
+                        %br
+                        = @item[:mintage]
+
+        #container
+
+            #content
+
+                = render "_#{@item[:sub_layout]}" if @item[:sub_layout]
+                = yield
+
+            #sidebar
+
+                %nav
+
+                    = link_to_unless_current('Главная', '/') 
+                    = link_to_unless_current('О сайте', '/about.html')
+
+                    %h2 Другие монеты в серии
+
+                    - sorted_coins_from_series(series_from_name(@item[:series])).each do |s|
+                        %a{ :href => "#" }
+                            = s[:head_title]
+
+                    %h2 Серии
+
+                    = link_to_unless_current('Города воинской славы', '/series/goroda-voinskoj-slavy/') 
+                    = link_to_unless_current('200-летие образования министерств', '/series/200letie-obrazovanija-ministerstv/')
+                    = link_to_unless_current('Российская Федерация', '/series/rossijskaja-federacija/')
+                    = link_to_unless_current('Древние города России', '/series/drevnie-goroda-rossii/')
+                    = link_to_unless_current('Сочи 2014', '/series/sochi-2014/')
+                    = link_to_unless_current('Годовщина Победы в Отечественной войне', '#')
+
+        = render '_footer'
