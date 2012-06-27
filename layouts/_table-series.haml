@@ -1,0 +1,58 @@
+-# TODO: код "грязно" написан и требует его переписать
+
+%ul#nav-mini
+    %li 
+        %a{ :href => "#" } по годам
+    %li 
+        %a{ :href => "#" } по количеству
+    %li 
+        %a{ :href => "#" } по двору
+
+
+- years = @item[:series].sort_by{ |e| e[:year] }.reverse
+- year_index = 0
+
+- while year_index < years.size
+    .table-series
+    
+        - col = 0
+
+        - while year_index < years.size and col < 3
+
+            - year = years[year_index]
+            - year_index = year_index + 1
+
+            .col
+                %h3{ :id => "#{ year[:year] }" } #{ year[:year] }
+
+                %table
+                    %thead
+                        %tr
+                            %th.col1 №
+                            %th Город
+                            %th.col5 МД
+                    %tbody
+
+                    - year[:coins].each_with_index do |coin, coin_index|
+                        
+                        - if coin[:mints]
+                            - coin[:mints].each_with_index do |mint, mint_index|
+
+                                %tr
+                                    %td #{ year_index + coin_index + mint_index }
+                                    %td.col2<
+                                        %a{ :href => "elec/" } #{ coin[:title] }
+
+                                    - if mint[:in_bucket]
+                                        %td.green #{ mint[:title] }
+                                    - else
+                                        %td.red #{ mint[:title] }
+
+                                            
+                        - else
+                            %tr
+                                %td{ :colspan => "3" }
+                                    %small
+                                        Не определено
+
+            - col = col + 1
