@@ -1,16 +1,15 @@
-markdown:       advanced
-sub_layout:     coin
+sub_layout:         "coin"
 
-head_title:     Курск | Города воинской славы
-post_title:     Курск, 2011 &mdash; 10 рублей
+head_title:         "Курск | Города воинской славы"
+post_title:         "Курск, 2011 &mdash; 10 рублей"
 
-image:          http://farm7.static.flickr.com/6155/6172629106_d78aa0bf18.jpg
-image_height:   250
-image_width:    500
+image:              "http://farm7.static.flickr.com/6155/6172629106_d78aa0bf18.jpg"
+image_height:       250
+image_width:        500
 
-catalogue_num:  5714-0003
-date_of_issue:  30 июня 2011
-date_of_purchase:   2011-11-21 20:15:00
-diameter:       22.0
-mass:           н/д
-mintage:        10 000 000
+catalogue_num:      "5714-0003"
+date_of_issue:      "30 июня 2011"
+date_of_purchase:   "2011-11-21 20:15:00"
+diameter:           22.0
+mass:               "н/д"
+mintage:            "10 000 000"

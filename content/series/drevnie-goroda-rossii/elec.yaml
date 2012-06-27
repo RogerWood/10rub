@@ -1,17 +1,16 @@
-layout:             coin
-markdown:           advanced
+layout:             "coin"
 
-series:             Древние города России
-head_title:         Елец
-post_title:         Елец, 2011 &mdash; 10 рублей
+series:             "Древние города России"
+title:              "Елец"
 
-image:              drevnie-goroda-rossii/2011elec-t
+image:              "drevnie-goroda-rossii/2011elec-t"
 image_height:       325
 image_width:        650
 
-catalogue_num:      5514-0075
-date_of_issue:      1 марта 2011
-date_of_purchase:   2011-11-21 20:15:00
+catalogue_num:      "5514-0075"
+date_of_issue:      "2011-03-01"
+date_of_purchase:   "2011-11-21 20:15:00"
+denomination:       "10 рублей"
 diameter:           27.0
-mass:               н/д
-mintage:            5 000 000
+mass:               "н/д"
+mintage:            "5 000 000"

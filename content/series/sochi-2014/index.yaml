@@ -1,8 +1,7 @@
-layout:         series
-markdown:       advanced
+layout:         "series"
 
-head_title:     Серия «Сочи 2014»
-post_title:     Серия «Сочи 2014»
+head_title:     "Серия «Сочи 2014»"
+post_title:     "Серия «Сочи 2014»"
 
-title_series:   Сочи 2014
+title_series:   "Сочи 2014"
 href_series:    "sochi-2014"

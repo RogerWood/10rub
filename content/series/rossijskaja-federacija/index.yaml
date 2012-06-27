@@ -1,8 +1,7 @@
-layout:         series
-markdown:       advanced
+layout:         "series"
 
-head_title:     Серия «Российская Федерация»
-post_title:     Серия «Российская Федерация»
+head_title:     "Серия «Российская Федерация»"
+post_title:     "Серия «Российская Федерация»"
 
-title_series:   Российская Федерация
+title_series:   "Российская Федерация"
 href_series:    "rossijskaja-federacija"

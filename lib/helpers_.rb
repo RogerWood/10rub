@@ -19,4 +19,4 @@ include Nanoc3::Helpers::Series
 include Nanoc3::Helpers::Coins
 
 # todo: определиться нужно ли?
-include Nanoc3::Helpers::Blogging
+#include Nanoc3::Helpers::Blogging

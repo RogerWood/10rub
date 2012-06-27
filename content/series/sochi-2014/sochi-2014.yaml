@@ -1,16 +1,15 @@
-markdown:           advanced
-sub_layout:         coin
+sub_layout:         "coin"
 
-head_title:         Сочи 2014
-post_title:         Сочи 2014
+head_title:         "Сочи 2014"
+post_title:         "Сочи 2014"
 
-image:              http://farm8.staticflickr.com/7015/6412270785_01aeef9f40.jpg
+image:              "http://farm8.staticflickr.com/7015/6412270785_01aeef9f40.jpg"
 image_height:       250
 image_width:        500
 
-catalogue_num:      -
-date_of_issue:      -
-date_of_purchase:   2011-11-21 20:15:00
+catalogue_num:      "-"
+date_of_issue:      "-"
+date_of_purchase:   "2011-11-21 20:15:00"
 diameter:           27.0
-mass:               -
+mass:               "-"
 mintage:            10 000 000

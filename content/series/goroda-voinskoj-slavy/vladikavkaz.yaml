@@ -1,16 +1,15 @@
-markdown:       advanced
-sub_layout:     coin
+sub_layout:         "coin"
 
-head_title:     Владикавказ | Города воинской славы
-post_title:     Владикавказ, 2011 &mdash; 10 рублей
+head_title:         "Владикавказ | Города воинской славы"
+post_title:         "Владикавказ, 2011 &mdash; 10 рублей"
 
-image:          http://farm7.static.flickr.com/6163/6186134418_3cb371cc05.jpg
-image_height:   250
-image_width:    500
+image:              "http://farm7.static.flickr.com/6163/6186134418_3cb371cc05.jpg"
+image_height:       250
+image_width:        500
 
-catalogue_num:  5714-0005
-date_of_issue:  1 сентября 2011
-date_of_purchase:   2011-11-21 20:15:00
-diameter:       22.0
-mass:           н/д
-mintage:        10 000 000
+catalogue_num:      "5714-0005"
+date_of_issue:      "1 сентября 2011"
+date_of_purchase:   "2011-11-21 20:15:00"
+diameter:           22.0
+mass:               "н/д"
+mintage:            "10 000 000"

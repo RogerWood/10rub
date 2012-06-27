@@ -20,7 +20,12 @@
 
         #post-title
         
-            %h2= @item[:post_title]
+            %h2<
+                = @item[:title]
+
+                - if @item[:denomination]
+                    &mdash; 
+                    = @item[:denomination]
 
         #coin
 
@@ -62,11 +67,11 @@
                     = link_to_unless_current('Главная', '/') 
                     = link_to_unless_current('О сайте', '/about.html')
 
-                    %h2 Другие монеты в серии
+                    %h2 Монеты в серии
 
                     - sorted_coins_from_series(series_from_name(@item[:series])).each do |s|
-                        %a{ :href => "#" }
-                            = s[:head_title]
+                        = link_to_unless_current(s[:title], s.path) 
+                       
 
                     %h2 Серии
 

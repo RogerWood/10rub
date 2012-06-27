@@ -44,7 +44,7 @@ module Nanoc3::Helpers
       def sorted_coins_from_series(series)
       
          coins_from_series(series).sort_by do |c|
-            attribute_to_time(c[:date_of_purchase])
+            attribute_to_time(c[:date_of_issue])
          end.reverse
          
       end

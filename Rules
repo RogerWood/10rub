@@ -15,7 +15,6 @@ end
  
 compile '/assets/css/*/' do
    filter :sass, Compass.sass_engine_options
-   #filter :rainpress
 end
 
 compile '/assets/js/*/' do
@@ -26,6 +25,16 @@ compile '/sitemap/' do
    filter :erb
 end
 
+# файл подтверждения прав для поисховых систем
+compile '/yandex_*/' do
+   # не обрабатывать
+end
+
+compile '/google*/' do
+   # не обрабатывать
+end
+
+#
 compile '*' do
    if item.binary?
       # бинарные файлы не трогаем
@@ -57,6 +66,10 @@ end
 # routing #####################################################################
 #
 
+route '/assets/css/_*/' do   
+   nil
+end
+
 route '/assets/css/*/' do
    item.identifier[11..-2] + '.css'
 end
@@ -67,6 +80,14 @@ end
 
 route '/sitemap/' do
    '/sitemap.xml'
+end
+
+route '/yandex_*/' do
+   item.identifier.chop + '.' + item[:extension]
+end
+
+route '/google*/' do
+   item.identifier.chop + '.' + item[:extension]
 end
 
 route '*' do

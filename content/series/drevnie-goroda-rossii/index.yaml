@@ -1,8 +1,316 @@
 layout:         series
-markdown:       advanced
 
-head_title:     Серия «Древние города России»
-post_title:     Серия «Древние города России»
+title:          Серия «Древние города России»
 
 title_series:   Древние города России
 href_series:    "drevnie-goroda-rossii"
+
+series:
+
+    - year: 2002
+      coins:
+
+        - title: Дербент
+          mints:
+
+            - title: М
+              in_bucket: yes
+              grading: 
+
+        - title: Кострома
+          mints:
+
+            - title: С-П
+              in_bucket: no
+              grading:
+
+        - title: Старая Русса
+          mints:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+    - year: 2003
+      coins:
+
+        - title: Псков
+          mints:
+
+            - title: С-П
+              in_bucket: no
+              grading:
+
+        - title: Муром
+          mints:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+        - title: Дорогобуж
+          mints:
+
+            - title: М
+              in_bucket: no
+              grading:
+
+        - title: Касимов
+          mints:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+    - year: 2004
+      coins:
+
+        - title: Дмитров
+          mints:
+
+            - title: М
+              in_bucket: yes
+              grading:
+
+        - title: Ряжск
+          mints:
+
+            - title: М
+              in_bucket: no
+              grading:
+
+        - title: Кемь
+          mints:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+    - year: 2005
+      coins:
+
+        - title: Калининград
+          mints:
+
+            - title: М
+              in_bucket: yes
+              grading:
+
+        - title: Казань
+          mints:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+        - title: Мценск
+          mints:
+
+            - title: М
+              in_bucket: yes
+              grading:
+
+        - title: Боровск
+          mints:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+    - year: 2006
+      coins:
+
+        - title: Белгород
+          mints:
+
+            - title: М
+              in_bucket: yes
+              grading:
+
+        - title: Торжок
+          mints:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+        - title: Каргополь
+          mints:
+
+            - title: М
+              in_bucket: yes
+              grading:
+
+    - year: 2007
+      coins:
+
+        - title: Вологда
+          mints:
+
+            - title: М
+              in_bucket: yes
+              grading:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+        - title: Великий Устюг
+          mints:
+
+            - title: М
+              in_bucket: yes
+              grading:
+
+            - title: С-П
+              in_bucket: no
+              grading:
+
+        - title: Гдов
+          mints:
+
+            - title: М
+              in_bucket: yes
+              grading:
+
+            - title: С-П
+              in_bucket: no
+              grading:
+
+    - year: 2008
+      coins:
+
+        - title: Владимир
+          mints:
+
+            - title: М
+              in_bucket: no
+              grading:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+        - title: Приозерск
+          mints:
+
+            - title: М
+              in_bucket: no
+              grading:
+
+            - title: С-П
+              in_bucket: no
+              grading:
+
+        - title: Смоленск
+          mints:
+
+            - title: М
+              in_bucket: no
+              grading:
+
+            - title: С-П
+              in_bucket: no
+              grading:
+
+        - title: Азов
+          mints:
+
+            - title: М
+              in_bucket: no
+              grading:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+    - year: 2009
+      coins:
+
+        - title: Выборг
+          mints:
+
+            - title: М
+              in_bucket: no
+              grading:
+
+            - title: С-П
+              in_bucket: no
+              grading:
+
+        - title: Галич
+          mints:
+
+            - title: М
+              in_bucket: no
+              grading:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+        - title: Калуга
+          mints:
+
+            - title: М
+              in_bucket: no
+              grading:
+
+            - title: С-П
+              in_bucket: no
+              grading:
+
+        - title: Великий Новгород
+          mints:
+
+            - title: М
+              in_bucket: no
+              grading:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+    - year: 2010
+      coins:
+
+        - title: Брянск
+          mints:  
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+        - title: Юрьевец
+          mints: 
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+    - year: 2011
+      coins:
+
+        - title: Елец
+          mints:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+        - title: Соликамск
+          mints:
+
+            - title: С-П
+              in_bucket: yes
+              grading:
+
+    - year: 2012
+      coins:
+
+        - title: Белозерск
+          mints:
+
+            - title: С-П
+              in_bucket: no
+              grading:

@@ -7,8 +7,8 @@ module Nanoc3::Helpers
          res = ''
          
          breadcrumbs_trail.reverse_each do |b|
-            if b
-               res += b[:head_title]
+            if b && b[:title]
+               res += b[:title]
                res += ' :: ' if b != breadcrumbs_trail.first
             end
          end 
