@@ -17,6 +17,7 @@ include Nanoc3::Helpers::Breadcrumbs
 include Nanoc3::Helpers::BreadcrumbsTitle
 include Nanoc3::Helpers::Series
 include Nanoc3::Helpers::Coins
+include Nanoc3::Helpers::Transliteration
 
 # todo: определиться нужно ли?
 #include Nanoc3::Helpers::Blogging

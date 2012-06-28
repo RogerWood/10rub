@@ -50,12 +50,7 @@ compile '*' do
             
          #
          when 'md', 'markdown' then
-            case item[:markdown]
-               when 'advanced' then
-                  filter :kramdown, :auto_ids => false
-               when 'basic' then
-                  filter :bluecloth
-            end
+            filter :kramdown, :auto_ids => false
       end
  
       layout (item[:layout] ? item[:layout].to_s : 'default')

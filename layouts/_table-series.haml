@@ -20,7 +20,7 @@
         - while year_index < years.size and col < 3
 
             - year = years[year_index]
-            - year_index = year_index + 1
+            - year_index += 1
 
             .col
                 %h3{ :id => "#{ year[:year] }" } #{ year[:year] }
@@ -41,7 +41,7 @@
                                 %tr
                                     %td #{ year_index + coin_index + mint_index }
                                     %td.col2<
-                                        %a{ :href => "elec/" } #{ coin[:title] }
+                                        %a{ :href => "#{ dirify coin[:title] }/" } #{ coin[:title] }
 
                                     - if mint[:in_bucket]
                                         %td.green #{ mint[:title] }
@@ -55,4 +55,4 @@
                                     %small
                                         Не определено
 
-            - col = col + 1
+            - col += 1
