@@ -1,7 +1,61 @@
 layout:         series
 
-head_title:     Серия «200-летие образования министерств»
-post_title:     Серия «200-летие образования министерств»
+title:          Серия «200-летие образования министерств»
 
 title_series:   200-летие министерств
 href_series:    "200letie-obrazovanija-ministerstv"
+
+series:
+
+    - year: 2002
+      coins:
+
+        - title: Вооруженные силы
+          mints:
+
+            - title: М
+              in-bucket: yes
+              grading:
+
+        - title: Мин-во иностранных дел
+          mints:  
+
+            - title: С-П
+              in-bucket: yes
+              grading:
+
+        - title: Мин-во юстиции
+          mints:
+
+            - title: С-П
+              in-bucket: yes
+              grading:
+
+        - title: Мин-во внутренних дел
+          mints:
+
+            - title: М
+              in-bucket: no
+              grading:
+
+        - title: Мин-во финансов
+          mints:
+
+            - title: С-П
+              in-bucket: no
+              grading:
+
+        - title: Мин-во ... развития и торговли
+          mints:
+
+            - title: С-П
+              in-bucket: yes
+              grading:
+
+        - title: Мин-во образования
+          mints:
+
+            - title: М
+              in-bucket: yes
+              grading:
+

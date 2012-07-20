@@ -1,4 +1,4 @@
--# TODO: код "грязно" написан и требует его переписать
+- require 'enumerator'
 
 %ul#nav-mini
     %li 
@@ -8,22 +8,17 @@
     %li 
         %a{ :href => "#" } по двору
 
-
+/ подготовим массив к выводу
 - years = @item[:series].sort_by{ |e| e[:year] }.reverse
-- year_index = 0
 
-- while year_index < years.size
+- years.each_slice(3) do |row|
     .table-series
-    
-        - col = 0
 
-        - while year_index < years.size and col < 3
+        - row.each_with_index do |year, year_index|
 
-            - year = years[year_index]
-            - year_index += 1
+            %div{ :class => year == row.last ? "col-last" : "col" }
 
-            .col
-                %h3{ :id => "#{ year[:year] }" } #{ year[:year] }
+                %h3{ :id => "#{ year[:year] }" }= year[:year]
 
                 %table
                     %thead
@@ -31,28 +26,26 @@
                             %th.col1 №
                             %th Город
                             %th.col5 МД
+                    
                     %tbody
+                        - year[:coins].each_with_index do |coin, coin_index|
+                            
+                            - if coin[:mints]
+                                - coin[:mints].each_with_index do |mint, mint_index|
 
-                    - year[:coins].each_with_index do |coin, coin_index|
-                        
-                        - if coin[:mints]
-                            - coin[:mints].each_with_index do |mint, mint_index|
+                                    %tr
+                                        %td= year_index + coin_index + mint_index
 
+                                        %td.col2<
+                                            %a{ :href => "#{ dirify coin[:title] }/" }= coin[:title]
+
+                                        - if mint[:in_bucket]
+                                            %td.green= mint[:title]
+                                        - else
+                                            %td.red= mint[:title]
+              
+                            - else
                                 %tr
-                                    %td #{ year_index + coin_index + mint_index }
-                                    %td.col2<
-                                        %a{ :href => "#{ dirify coin[:title] }/" } #{ coin[:title] }
-
-                                    - if mint[:in_bucket]
-                                        %td.green #{ mint[:title] }
-                                    - else
-                                        %td.red #{ mint[:title] }
-
-                                            
-                        - else
-                            %tr
-                                %td{ :colspan => "3" }
-                                    %small
-                                        Не определено
-
-            - col += 1
+                                    %td{ :colspan => "3" }
+                                        %small
+                                            Не определено
