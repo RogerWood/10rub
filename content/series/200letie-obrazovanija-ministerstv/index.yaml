@@ -42,7 +42,7 @@ series:
           mints:
 
             - title: С-П
-              in-bucket: no
+              in-bucket: yes
               grading:
 
         - title: Мин-во ... развития и торговли

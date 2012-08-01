@@ -1,45 +1,39 @@
 !!!
 %html{ :lang => "ru" }
 
-    %head
-        %meta{ "charset" => "UTF-8" }
-        %title= breadcrumbs_title   
-                
-        %link{ :rel => "icon", :type => "image/png", :href => "/favicon.png" }
-        %link{ :rel => "stylesheet", :href => "/screen.css", :type => "text/css", :media => "screen, projection" }
-        %link{ :rel => "stylesheet", :href => "/print.css", :type => "text/css", :media => "print" }
+   %head
+      %meta{ "charset" => "UTF-8" }
+      %title= breadcrumbs_title       
+      %link{ :rel => "icon", :type => "image/png", :href => "/favicon.png" }
+      %link{ :rel => "stylesheet", :href => "/screen.css", :media => "screen" }
+      %link{ :rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=PT+Serif:700&subset=cyrillic,latin" }
 
-        /[if IE]
-            %link{ :rel => "stylesheet", :href => "/ie.css", :type => "text/css", :media => "screen, projection" }
+   %body
+   
+      = render '_header'
+      
+      %table#content
+         %tr
+            %td{ :width => "8%" }
+            %td{ :width => "64%" }
+               .offset
+                  %h2= @item[:post_title]
+                  = render "_#{@item[:sub_layout]}" if @item[:sub_layout]
+                  = yield
+                  
+            %td{ :width => "28%" }
+               %nav
+               
+                  = link_to_unless_current('Главная', '/') 
+                  = link_to_unless_current('О сайте', '/about.html') 
 
-        %link{ :href => "http://fonts.googleapis.com/css?family=PT+Serif:700&subset=cyrillic,latin", :rel => "stylesheet", :type => "text/css" }
+                  %h2 Серии
 
-    %body
+                  = link_to_unless_current('Города воинской славы', '/series/goroda-voinskoj-slavy/') 
+                  = link_to_unless_current('200-летие образования министерств', '/series/200letie-obrazovanija-ministerstv/')
+                  = link_to_unless_current('Российская Федерация', '/series/rossijskaja-federacija/')
+                  = link_to_unless_current('Древние города России', '/series/drevnie-goroda-rossii/')
+                  = link_to_unless_current('Сочи 2014', '/series/sochi-2014/')
 
-        = render '_header'
-
-        #container
-
-            #content
-
-                %h2= @item[:post_title]
-                = render "_#{@item[:sub_layout]}" if @item[:sub_layout]
-                = yield
-
-            #sidebar
-
-                %nav
-
-                    = link_to_unless_current('Главная', '/') 
-                    = link_to_unless_current('О сайте', '/about.html') 
-
-                    %h2 Серии
-
-                    = link_to_unless_current('Города воинской славы', '/series/goroda-voinskoj-slavy/') 
-                    = link_to_unless_current('200-летие образования министерств', '/series/200letie-obrazovanija-ministerstv/')
-                    = link_to_unless_current('Российская Федерация', '/series/rossijskaja-federacija/')
-                    = link_to_unless_current('Древние города России', '/series/drevnie-goroda-rossii/')
-                    = link_to_unless_current('Сочи 2014', '/series/sochi-2014/')
-                    = link_to_unless_current('Годовщина Победы в Отечественной войне', '#')
-
-        = render '_footer'
+      = render '_footer'
+      

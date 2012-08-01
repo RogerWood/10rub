@@ -11,10 +11,13 @@
 / подготовим массив к выводу
 - years = @item[:series].sort_by{ |e| e[:year] }.reverse
 
+/ счетчик количества монет в серии
+- coins = years.size
+
 - years.each_slice(3) do |row|
     .table-series
 
-        - row.each_with_index do |year, year_index|
+        - row.each do |year|
 
             %div{ :class => year == row.last ? "col-last" : "col" }
 
@@ -28,13 +31,13 @@
                             %th.col5 МД
                     
                     %tbody
-                        - year[:coins].each_with_index do |coin, coin_index|
+                        - year[:coins].each do |coin|
                             
                             - if coin[:mints]
-                                - coin[:mints].each_with_index do |mint, mint_index|
+                                - coin[:mints].each do |mint|
 
                                     %tr
-                                        %td= year_index + coin_index + mint_index
+                                        %td= coins += 1
 
                                         %td.col2<
                                             %a{ :href => "#{ dirify coin[:title] }/" }= coin[:title]
